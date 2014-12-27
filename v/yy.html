@@ -1,0 +1,320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CLANNAD~A.C.G.N~</title>
+<link rel="stylesheet" href="../css/top.css" />
+<link rel="stylesheet" href="../css/footer.css" />
+<script src="../js/a.js"></script>
+<script>
+	var id;
+	var i=0;
+	var arr=["0%","-100%","-200%","-300%","-400%","-500%"];
+	function change(ch)
+	{
+			var box=getElementsByClassName("box");
+			box[0].style.left=ch;
+			
+			var bt=getElementsByClassName("bt");
+			var j;
+			for(j=0;j<bt.length;++j)
+			{
+				bt[j].style.width="16px";
+				bt[j].style.background="#CCC";
+			}
+			for(j=0;j<arr.length;j++)
+			{
+				if(ch==arr[j])
+				{
+					i=j;
+					bt[j].style.width="24px";
+					bt[j].style.background="#F69";
+				}
+			}
+	}
+	function imgscoll()
+	{
+			change(arr[i]);
+			i++;
+			if(i==arr.length)
+				i=0;
+	}
+	function play()
+	{
+		
+		id=window.setInterval(imgscoll, 3000); 
+	}
+	function stop()
+	{
+		window.clearInterval(id);
+	}
+	play();
+</script>
+<style>
+	.current a{
+		color:#6FF;	
+	}
+	.yyim{
+		float:left;
+		position:relative;
+		width:620px;
+		height:220px;
+		overflow:hidden;
+	}
+	.sci a,.sci img{
+		width:620px;
+		height:220px;
+		float:left;
+		border-radius:10px;
+	}
+	.sca{
+		width:160px;
+		height:10px;
+		position:absolute;
+		bottom:8px;
+		right:8px;
+	}
+	.bt{
+		float:left;
+		width:16px;
+		height:10px;
+		background:#CCC;
+		margin:0 0 0 8px;
+		cursor:pointer;
+	}
+	.bt1{
+		background:#F69;
+		width:24px;
+	}
+	.box{
+		position: relative;
+		width: 600%;
+		height: 100%;
+		transition:left 1000ms ease;
+		-moz-transition:left 1000ms ease;	/* Firefox 4 */
+		-webkit-transition:left 1000ms ease;	/* Safari 和 Chrome */
+		-o-transition:left 1000ms ease; /* Opera */
+	}
+	.dt{
+		width:620px;
+		height:560px;
+		float:left;
+		padding:0px;
+		margin:0px;
+	    clear:left;
+		margin-top:10px;
+		box-sizing: border-box;
+		background:white;
+	}
+	.dtz{
+		width:570px;
+		height:500px;
+		margin:0 auto;
+		padding:0px;
+	}
+    .dtz img{
+		width:160px;
+		height:90px;
+		float:left;
+	}
+	.dta{
+	    height:130px;
+		width:160px;
+		float:left;
+		padding-left:25px;
+	}
+	.dt .hd{
+		text-align:left;
+		padding-left:10px;
+	}
+	.dta .bc{
+		font-size:15px;
+		height:40px;
+		width:160px;
+		overflow:hidden;
+	}
+	.pr{
+		width:380px;
+		height:220px;
+		float:left;
+	}
+	.prc{
+	   width:160px;
+	   height:100px;
+	   position:relative;
+	   float:left;
+	   margin-left:30px;
+	}
+	.l1{
+		margin-bottom:10px;
+	}
+	.l2{
+		margin-top:10px;
+	}
+	.prc img{
+	   width:160px;
+	   height:100px;
+	   border-radius:10px;
+	}
+	.t{
+		font-size:12px;
+		position:absolute;
+		bottom:0px;
+		color:white;
+		overflow:hidden;
+		background:url("../image/coverbg.png") repeat-x;
+		width:160px;
+		height:18px;
+	}
+	.top_r{
+	  top:200px;
+	  width:370px;
+	  height:610px;
+	  margin-top:10px;
+	  margin-left:6px;
+	  float:left;
+	  background:white;
+	  overflow:hidden;
+	}
+	.yytj{
+		padding:5px 0px;
+		font-family: 宋体;
+		font-size: 12px;
+		margin:0px 5px;
+	}
+	.yytj img{
+		float:left;
+		height: 73px;
+		width: 130px;
+		border: 1px solid #CCCCCC;
+		padding: 1px;
+
+	}
+	.yytj .yt{
+		line-height: 18px;
+
+		text-align: left;
+		font-weight: bold;
+		color:#F93;
+		margin-left:5px;
+	}
+	.yytj ul li{
+		margin:5px 0px 5px 0px;
+		clear:both;
+		weight:352px;
+		height:90px;
+	}
+	.yytj ul{
+		margin:0px 4px;
+	}
+	.f{
+		margin:0px;
+		text-align: left;
+	    color: #000;
+	}
+	.c{
+		line-height: 18px;
+		weight:210px;
+		height:90px;
+		padding-left:5px;
+		margin:0px;
+	    overflow: hidden;
+	}
+</style>
+</head>
+
+<body>
+<div>
+	<div id="top">
+     	<div id="title">CLANNAD~A.C.G.N~</div>
+        <div id="guide">
+        	<ul>
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="./dh.html">动画</a></li>
+                <li><a href="./yx.html">游戏</a></li>
+                <li class="current"><a href="">音乐</a></li>
+                <li><a href="./xs.html">小说</a></li>
+                <li><a href="./tp.html">图片</a></li>
+                <li><a href="./lt.html">论坛</a></li>
+            </ul>
+            <div class="search">
+            <form action="" method="">
+            	<input type="text" />
+                <button type="submit" ></button>
+            </form>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="tt">
+    	 <div class="yyim" onmouseover="stop()" onMouseOut="play()">
+        	<div class="sci">
+            	<div class="box">
+                    <a href=""><img src="../image/yy/y1.jpg" /></a>
+                    <a href=""><img src="../image/yy/y2.jpg" /></a>
+                    <a href=""><img src="../image/yy/y3.jpg" /></a>
+                    <a href=""><img src="../image/yy/y4.jpg" /></a>
+                    <a href=""><img src="../image/yy/y5.jpg" /></a>
+                    <a href=""><img src="../image/yy/y6.jpg" /></a>
+                </div>
+            </div>
+            <div class="sca" >
+            	<div class="bt bt1" onmouseover="change('0%')"><a></a></div>
+                <div class="bt bt2" onmouseover="change('-100%')"><a></a></div>
+                <div class="bt bt3" onmouseover="change('-200%')"><a></a></div>
+                <div class="bt bt3" onmouseover="change('-300%')"><a></a></div>
+                <div class="bt bt3" onmouseover="change('-400%')"><a></a></div>
+                <div class="bt bt3" onmouseover="change('-500%')"><a></a></div>
+            </div>
+        </div>
+        <div class="pr">
+        	<div class="prc l1"><a><img src="../image/yy/pr/1.jpg"/><div class="t">【国人男声】自由的飞（给每个孩子一颗自由的心）</div></a></div>
+            <div class="prc l1"><a><img src="../image/yy/pr/2.jpg"/><div class="t">秦时明月 《月光》羽绣翻唱</div></a></div>
+            <div class="prc l2"><a><img src="../image/yy/pr/3.jpg"/><div class="t">【VanKu】别走   piano.ver</div></a></div>
+            <div class="prc l2"><a><img src="../image/yy/pr/4.jpg"/><div class="t">【泠鸢】FATE/SN-ubw-ED《believe》</div></a></div>
+        </div>
+      </div>
+        <div class="dt bd">
+        	<div class="hd">
+            	热门音乐
+            </div>
+        	<div class="dtz">
+            	<div class="dta"><a href="" target="_blank"><img src="../image/yy/rm/1.jpg" /><div class="bc">2014年25首欧美流行热单混音mv大首播！</div></a></div>
+                <div class="dta"><a href="" target="_blank"><img src="../image/yy/rm/2.jpg" /><div class="bc">Animelo Summer Live 2014</div></a></div>
+                <div class="dta"><a href="" target="_blank"><img src="../image/yy/rm/3.jpg" /><div class="bc">【种族天赋】登上billboard第一名的黑人念</div></a></div>
+                <div class="dta"><a href="" target="_blank"><img src="../image/yy/rm/4.jpg" /><div class="bc">【中英字幕】世界单曲销量榜TOP30 第49期 </div></a></div>
+                <div class="dta"><a href="" target="_blank"><img src="../image/yy/rm/5.jpg" /><div class="bc">【音悦疯字幕】美国同志歌手Eli Lieb新单Lightning in a Bottle中英字幕</div></a></div>
+                <div class="dta"><a href="" target="_blank"><img src="../image/yy/rm/6.jpg" /><div class="bc">郑中基-one more time,one more chance</div></a></div>
+                <div class="dta"><a href="" target="_blank"><img src="../image/yy/rm/7.jpg" /><div class="bc">【欧美流行音乐】Billboard榜冠军单曲中英字幕MV大合集！！</div></a></div>
+                <div class="dta"><a href="" target="_blank"><img src="../image/yy/rm/8.jpg" /><div class="bc">能让你循环的作业音系列，良曲篇</div></a></div>
+                <div class="dta"><a href="" target="_blank"><img src="../image/yy/rm/9.jpg" /><div class="bc">2014第42届全美音乐大奖【高清中字】</div></a></div>
+                <div class="dta"><a href="" target="_blank"><img src="../image/yy/rm/10.jpg" /><div class="bc">【洛天依】唱给雅音宮羽Ⅱ【原创曲PV付·Sodatune】</div></a></div>
+                <div class="dta"><a href="" target="_blank"><img src="../image/yy/rm/11.jpg" /><div class="bc">【初音ミク】ゴーストサプリ -横浜自殺日和-【オリジナル曲】</div></a></div>
+                <div class="dta"><a href="" target="_blank"><img src="../image/yy/rm/12.jpg" /><div class="bc">【初音ミク】記憶のない物語【のぼる↑】</div></a></div>          
+            </div>
+        </div>
+         <div class="top_r bd">
+            <div class="hd">
+                音乐推荐
+            </div>
+            <div class="yytj">
+            	<ul>
+                	<li><a href=""><img src="../image/yy/tj/1.jpg" /></a><div class="c"><a class="yt" href="">我的滑板鞋东北方言版、报复社会系列、全程高能</a><div class="f">自制 这个我宿舍老六唱的，没想到在微博居然辣么火~~~~~~整个人都觉得节操满满，于是在六爷百般无奈和阻拦</div></div></li>
+                    <li><a href=""><img src="../image/yy/tj/2.jpg" /></a><div class="c"><a class="yt" href="">【日系RNB神专欣赏】Nao'ymt Wit' -1st Season</a><div class="f">这里推荐一张RNB神专辑，相信这是一张RNB控听后一定不后悔的专辑. 此外也推荐下Nao'ymt这位日本制作人</div></div></li>
+                    <li><a href=""><img src="../image/yy/tj/3.jpg" /></a><div class="c"><a class="yt" href="">中文翻唱动漫歌曲</a><div class="f">二次创作 额...偶尔发现这些动漫歌曲还有中文翻唱，就找了找发上来了，原作者不满意可私聊我删了。</div></div></li>
+                    <li><a href=""><img src="../image/yy/tj/4.jpg" /></a><div class="c"><a class="yt" href="">【泠鸢·填词】神的随波逐流-中文版【神的自我催眠= =b】</a><div class="f">久违的填词，本来打算按原词翻填一个，没想到写着写着脑洞开了，于是就变成了落魄的神明自我安慰以及安慰别人的故事……嗯嗯，差不多就是没事找乐的意思~~这么一说起来好想喝点小酒_(:з」∠)_</div></div></li>
+                    <li><a href=""><img src="../image/yy/tj/5.jpg" /></a><div class="c"><a class="yt" href="">【祈Inory】《宝物》中文填词 & 原创曲《亲爱的，家》</a><div class="f">自制 P1是婚礼开场曲，感谢十二玄樱酱的填词，感谢祈队的大家一周内的赶制的伴奏！ </div></div></li>
+                    <li><a href=""><img src="../image/yy/tj/6.jpg" /></a><div class="c"><a class="yt" href="">【洛天依原创曲】我要买买买【PV付】</a><div class="f">自制 词/曲/编/混 by iKz @Signal-E | 调教 by 科林 | 绘 by Rita羽 | PV by 熊豆@爱笛映画 Signal-E社团第二首洛天依原创单曲，双十一快来了也不要总想着烧光棍嘛。</div></div></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="cl"></div>
+    <div id="footer">
+    	<div class="by">
+    		Copyright © 2014 蔡鸿霖. 保留所有权利
+        </div>
+    </div>
+</div>
+</body>
+</html>

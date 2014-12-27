@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CLANNAD~A.C.G.N~</title>
+<link rel="stylesheet" href="../css/top.css" />
+<link rel="stylesheet" href="../css/footer.css" />
+<script>
+function sy()
+{
+	var imgs=document.querySelectorAll(".tps img");
+	var width;
+	var height;
+	var str="";
+	var temp;
+	for(var i=0;i<imgs.length;i++)
+	{
+		width=imgs[i].offsetWidth;
+		height=imgs[i].offsetHeight;
+		if(width>height)
+		{
+			imgs[i].style.height="150px";
+			temp=150.0/height*width;
+			imgs[i].style.width=temp+"px";
+			imgs[i].style.marginLeft=-(temp-150)/2+"px";
+		}
+		else 
+		{
+			imgs[i].style.width="150px";
+			temp=150.0/width*height;
+			imgs[i].style.height=temp+"px";
+			imgs[i].style.marginTop=-(temp-150)/2+"px";
+		}
+	}
+}
+</script>
+<style>
+	.current a{
+		color:#CF3;
+	}
+	.tp{
+		width:160px;
+		height:180px;
+		overflow:hidden;
+		float:left;
+		background:#FFF;
+		margin:5px 10px;
+		border:1px solid #ccc;
+		box-sizing:border-box;
+		border-radius:10px;
+	}
+	.tp .im{
+		width:150px;
+		height:150px;
+		overflow:hidden;
+		border-radius:10px;
+	}
+	.tps{
+		margin:0 auto;
+		width:900px;
+	}
+</style>
+</head>
+<body onload="sy()">
+<div>
+	<div id="top">
+     	<div id="title">CLANNAD~A.C.G.N~</div>
+        <div id="guide">
+        	<ul>
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="./dh.html">动画</a></li>
+                <li><a href="./yx.html">游戏</a></li>
+                <li><a href="./yy.html">音乐</a></li>
+                <li><a href="./xs.html">小说</a></li>
+                <li class="current"><a href="">图片</a></li>
+                <li><a href="./lt.html">论坛</a></li>
+            </ul>
+            <div class="search">
+            <form action="" method="">
+            	<input type="text" />
+                <button type="submit" ></button>
+            </form>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+    	<div class="tps">
+        	<div class="tp"><div class="im"><a href="../image/tp/1.jpg" target="_blank"><img src="../image/tp/1.jpg"/></a></div>魔笛magic</div>
+            <div class="tp"><div class="im"><a href="../image/tp/2.jpg" target="_blank"><img src="../image/tp/2.jpg"/></a></div>刀剑神域</div>
+            <div class="tp"><div class="im"><a href="../image/tp/3.jpg" target="_blank"><img src="../image/tp/3.jpg"/></a></div>Tsubasa翼</div>
+            <div class="tp"><div class="im"><a href="../image/tp/4.jpg" target="_blank"><img src="../image/tp/4.jpg"/></a></div>Sayori</div>
+            <div class="tp"><div class="im"><a href="../image/tp/5.jpg" target="_blank"><img src="../image/tp/5.jpg"/></a></div>angel_beats!</div>
+            <div class="tp"><div class="im"><a href="../image/tp/6.jpg" target="_blank"><img src="../image/tp/6.jpg"/></a></div>Black★Rock</div>
+            <div class="tp"><div class="im"><a href="../image/tp/7.jpg" target="_blank"><img src="../image/tp/7.jpg"/></a></div>小鸠</div>
+            <div class="tp"><div class="im"><a href="../image/tp/8.jpg" target="_blank"><img src="../image/tp/8.jpg"/></a></div>K-ON</div>
+            <div class="tp"><div class="im"><a href="../image/tp/9.jpg" target="_blank"><img src="../image/tp/9.jpg"/></a></div>冈崎汐</div>
+            <div class="tp"><div class="im"><a href="../image/tp/10.jpg" target="_blank"><img src="../image/tp/10.jpg"/></a></div>XXXHOLiC</div>
+            <div class="tp"><div class="im"><a href="../image/tp/11.jpg" target="_blank"><img src="../image/tp/11.jpg"/></a></div>07-GHOST</div>
+            <div class="tp"><div class="im"><a href="../image/tp/12.jpg" target="_blank"><img src="../image/tp/12.jpg"/></a></div>潘多拉之心</div>
+            <div class="tp"><div class="im"><a href="../image/tp/13.jpg" target="_blank"><img src="../image/tp/13.jpg"/></a></div>化物语</div>
+            <div class="tp"><div class="im"><a href="../image/tp/14.jpg" target="_blank"><img src="../image/tp/14.jpg"/></a></div>海物语</div>
+            <div class="tp"><div class="im"><a href="../image/tp/15.jpg" target="_blank"><img src="../image/tp/15.jpg"/></a></div>CANAAN</div>
+            <div class="tp"><div class="im"><a href="../image/tp/16.jpg" target="_blank"><img src="../image/tp/16.jpg"/></a></div>信蜂</div>
+            <div class="tp"><div class="im"><a href="../image/tp/17.jpg" target="_blank"><img src="../image/tp/17.jpg"/></a></div>家庭教师</div>
+            <div class="tp"><div class="im"><a href="../image/tp/18.jpg" target="_blank"><img src="../image/tp/18.jpg"/></a></div>文学少女</div>
+            <div class="tp"><div class="im"><a href="../image/tp/19.jpg" target="_blank"><img src="../image/tp/19.jpg"/></a></div>東方</div>
+            <div class="tp"><div class="im"><a href="../image/tp/20.jpg" target="_blank"><img src="../image/tp/20.jpg"/></a></div>【A★C★G★N】</div>
+        </div>
+    </div>
+    <div class="cl"></div>
+    <div id="footer">
+    	<div class="by">
+    		Copyright © 2014 蔡鸿霖. 保留所有权利
+        </div>
+    </div>
+</div>
+</body>
+</html>

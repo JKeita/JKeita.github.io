@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CLANNAD~A.C.G.N~</title>
+<link rel="stylesheet" href="../css/top.css" />
+<link rel="stylesheet" href="../css/footer.css" />
+<script src="../js/a.js"></script>
+<script>
+	var id;
+	var i=0;
+	var arr=["0%","-100%","-200%"];
+	function change(ch)
+	{
+			var box=getElementsByClassName("box");
+			box[0].style.left=ch;
+			
+			var bt=getElementsByClassName("bt");
+			var j;
+			for(j=0;j<bt.length;++j)
+			{
+				bt[j].style.width="16px";
+				bt[j].style.background="#CCC";
+			}
+			for(j=0;j<arr.length;j++)
+			{
+				if(ch==arr[j])
+				{
+					i=j;
+					bt[j].style.width="24px";
+					bt[j].style.background="#F69";
+				}
+			}
+	}
+	function imgscoll()
+	{
+			change(arr[i]);
+			i++;
+			if(i==arr.length)
+				i=0;
+	}
+	function play()
+	{
+		
+		id=window.setInterval(imgscoll, 3000); 
+	}
+	function stop()
+	{
+		window.clearInterval(id);
+	}
+	play();
+</script>
+<style>
+
+	.current a{
+		color:#F00;	
+	}
+	.glist{
+		background:white;
+	}
+	.glist h4,.glist a{
+		float:left;
+		height:16px;
+		
+		overflow:hidden;
+		width:80px;
+		margin:0px;
+	}
+	.gl{
+	
+		height:115px;
+		width:1000px;
+		margin:0px;
+		text-align:left;
+		font-size:12px;
+	}
+	.t{
+	clear:both;
+	}
+	.top_l{
+	  top:200px;
+	  width:370px;
+	  height:505px;
+	  margin-top:5px;
+	  background:white;
+	}
+	.top_l{
+		float:left;
+	}
+	.top_r{
+		float:right;
+		background:white;
+	}
+	img{
+		padding:0px;
+	}
+	.yxzx{
+		padding:5px 0px;
+		font-family: 宋体;
+		font-size: 12px;
+		margin:0px 5px;
+	
+	}
+	.yxzx img{
+		float:left;
+		height: 73px;
+		width: 130px;
+		border: 1px solid #CCCCCC;
+		padding: 1px;
+
+	}
+	.yxzx .yxa{
+		line-height: 18px;
+
+		text-align: left;
+		font-weight: bold;
+		color:#F93;
+		margin-left:5px;
+	}
+	.yxzx ul li{
+		margin:5px 0px 5px 0px;
+		clear:both;
+		weight:352px;
+		height:90px;
+	}
+	.yxzx ul{
+		margin:0px 4px;
+	}
+	.f{
+		margin:0px;
+		text-align: left;
+	    color: #000;
+	}
+	.c{
+		line-height: 18px;
+		weight:210px;
+		height:90px;
+		padding-left:5px;
+		margin:0px;
+	    overflow: hidden;
+	}
+	.top_r{
+		margin-top:5px;
+	}
+
+	.tj a{
+		text-align:left;
+		width:200px;
+		line-height:21px;
+		padding:5px;
+		font-size:12px;
+	}
+	.tj li{
+		border-bottom:1px solid #CCC;
+	}
+	.yxim{
+		float:left;
+		position:relative;
+		margin-top:5px;
+		margin-left:8px;
+		width:400px;
+		height:250px;
+		overflow:hidden;
+	}
+	.sci a,.sci img{
+		width:400px;
+		height:250px;
+		float:left;
+	}
+	.top_bo{
+		float:left;
+		width:400px;
+		margin-top:5px;
+		margin-left:8px;
+		background:white;
+	}
+	.mj{
+		width:400px;
+		height:216px;
+		padding:2px 0px;
+	}
+	.mj a{
+		width:400px;
+		height:20px;
+		text-align:left;
+		padding:2px 0px;
+		font-size:14px;
+		overflow:hidden;
+	}
+	.sca{
+		width:80px;
+		height:10px;
+		position:absolute;
+		bottom:8px;
+		right:8px;
+	}
+	.bt{
+		float:left;
+		width:16px;
+		height:10px;
+		background:#CCC;
+		margin:0 0 0 8px;
+		cursor:pointer;
+	}
+	.bt1{
+		background:#F69;
+		width:24px;
+	}
+	.box{
+		position: relative;
+		width: 300%;
+		height: 100%;
+		transition:left 1000ms ease;
+		-moz-transition:left 1000ms ease;	/* Firefox 4 */
+		-webkit-transition:left 1000ms ease;	/* Safari 和 Chrome */
+		-o-transition:left 1000ms ease; /* Opera */
+	}
+</style>
+</head>
+<body>
+<div>
+	<div id="top">
+     	<div id="title">CLANNAD~A.C.G.N~</div>
+        <div id="guide">
+        	<ul>
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="./dh.html">动画</a></li>
+                <li class="current"><a href="">游戏</a></li>
+                <li><a href="./yy.html">音乐</a></li>
+                <li><a href="./xs.html">小说</a></li>
+                <li><a href="./tp.html">图片</a></li>
+                <li><a href="./lt.html">论坛</a></li>
+            </ul>
+            <div class="search">
+            <form action="" method="">
+            	<input type="text" />
+                <button type="submit" ></button>
+            </form>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+    	<div class="glist">
+			<div class="bd gl">
+            	<div class="t">
+            	<h4>网络游戏：</h4> <a>使命召唤OL</a> <a> 全球使命2</a> <a> 倩女幽魂2</a> <a> FIFAOL 3 </a> <a> 剑灵</a> <a> Dota2</a> <a> 神谕之战 </a> <a> 魔兽世界</a> <a> 最终幻想14</a> <a>灵魂回响</a> <a> 炉石传说</a> <a> 英雄联盟</a> <a> 风暴英雄</a><a>CSOL</a><a>穿越火线</a>
+                </div>
+                <div class="t">
+				<h4>网页游戏：</h4><a>传奇</a> <a> 权力的游戏</a> <a> 三国志13</a> <a> 凡人修仙传 </a> <a> 经典征途</a> <a> 寂静岭5 </a> <a> 大天使之剑 </a> <a> 傲剑2</a> <a> 奇迹 </a> <a> 征途 </a> <a> 武林外传</a>
+                </div>
+                <div class="t">
+				<h4>热门单机：</h4> <a>看门狗</a> <a> 古剑奇谭</a> <a> 暗黑3</a> <a> 古墓丽影9</a> <a> 孤岛危机3</a> <a> 刺客信条4</a> <a> 火影究极风暴3</a> <a> 信长野望14</a> <a> 文明5</a> <a> 愤怒的小鸟</a> <a> 植物大战僵尸2</a> <a> 真三国无双7</a><a>火炬之光2</a> <a> 鬼泣5</a> <a> NBA 2K15</a> <a> 战地3</a>
+                </div>
+                <div class="t">
+				<h4>近期新作： </h4><a>飙酷车神 </a> <a> 巫师：冒险游戏</a> <a> 无主之地传说</a> <a> 孤岛惊魂4</a> <a> 龙腾世纪：审判</a> <a> GTA5</a> <a> 这是我的战争</a> <a> 逃离死亡岛</a> <a> 刺客信条大革命</a> <a> 恶灵附身</a> <a> 火影-革命</a>
+                </div>
+                <div class="t">
+				<h4>即将上市：</h4> <a> 罪恶装备</a> <a> 劳拉和奥西里斯神庙</a> <a> 光明之响</a> <a> 最终幻想13-2</a> <a> 光环：斯巴达进攻</a> <a> 乌鸦的悲鸣</a> <a> 合金装备5原爆点</a> <a> 杀戮空间2</a> <a> 轩辕剑7</a> <a> 进化</a>
+                </div>
+            </div>
+        </div>
+        <div class="top_l bd">
+            <div class="hd">
+                游戏资讯
+            </div>
+            <div class="yxzx">
+            	<ul>
+                	<li><a href=""><img src="../image/yx/yx1.jpg" /></a><div class="c"><a class="yxa" href="">《死或生5：最后一战》确认登录PC</a><div class="f">《死或生5：最后一战》官方最新预告正式确认本作PC版将与主机版同步2015年2月19日发行。</div></div></li>
+                    <li><a href=""><img src="../image/yx/yx2.jpg" /></a><div class="c"><a class="yxa" href="">第一视角《口袋妖怪》演示</a><div class="f">玩家不仅可以用虚拟现实设备去指挥对战，还能捕捉野生小精灵，次世代《口袋妖怪》大抵就是如此吧。</div></div></li>
+                    <li><a href=""><img src="../image/yx/yx3.jpg" /></a><div class="c"><a class="yxa" href="">《仙剑奇侠传6》12月9日神秘爆料</a><div class="f">《仙剑奇侠传6》在12月9日会有神秘大事件公布，到底是什么呢？姚壮宪在微博上的态度很值得玩家玩味。</div></div></li>
+                    <li><a href=""><img src="../image/yx/yx4.jpg" /></a><div class="c"><a class="yxa" href="">卡普空或推新作 疑为《鬼泣5》</a><div class="f">11月26日《龙之信条》官网上写道：“《鬼泣》？《龙之信条2》？他们将是什么样？你又期待着什么？”</div></div></li>
+                    <li><a href=""><img src="../image/yx/yx5.jpg" /></a><div class="c"><a class="yxa" href="">《御天降魔传》用Unity5引擎打造</a><div class="f">据爆料，《御天降魔传》将采用Unity5引擎，此次举动势必要将该游戏打造成一款掷地有声的好游戏。</div></div></li>
+                </ul>
+            </div>
+        </div>
+        <div class="top_r bd">
+            <div class="hd">
+                游戏推荐
+            </div>
+            <div class="tj">
+            	<ul>
+                	<li><a href="">孤岛惊魂4</a></li>
+                    <li><a href="">龙腾世纪：审判</a></li>
+                    <li><a href="">实况足球2015</a></li>
+                    <li><a href="">使命召唤11：高级战争</a></li>
+                    <li><a href="">刺客信条：大革命</a></li>
+                    <li><a href="">NBA 2K15</a></li>
+                    <li><a href="">火影忍者疾风传：究极忍者风暴-革命</a></li>
+                    <li><a href="">丧尸围城</a></li>
+                    <li><a href="">模拟人生</a></li>
+                    <li><a href="">堕落之王</a></li>
+                    <li><a href="">文明：太空</a></li>
+                    <li><a href="">战场女武神</a></li>
+                    <li><a href="">无主之地传说</a></li>
+                     <li><a href="">狙击精英</a></li>
+                      <li><a href="">刺客信条：叛变</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="yxim" onmouseover="stop()" onMouseOut="play()">
+        	<div class="sci">
+            	<div class="box">
+                    <a href=""><img src="../image/yx/yxa1.jpg" /></a>
+                    <a href=""><img src="../image/yx/yxa2.jpg" /></a>
+                    <a href=""><img src="../image/yx/yxa3.jpg" /></a>
+                </div>
+            </div>
+            <div class="sca" >
+            	<div class="bt bt1" onmouseover="change('0%')"><a></a></div>
+                <div class="bt bt2" onmouseover="change('-100%')"><a></a></div>
+                <div class="bt bt3" onmouseover="change('-200%')"><a></a></div>
+            </div>
+        </div>
+        <div class="top_bo bd">
+            <div class="hd">
+                攻略秘籍
+            </div>
+            <div class="mj">
+            	<ul>
+                	<li><a href="">《孤岛惊魂4》切换爆炸箭箭头方法</a></li>
+                    <li><a href="">《刺客信条：大革命》刺杀动作图文一览</a></li>
+                    <li><a href="">《FC热血》全系列解说视频</a></li>
+                    <li><a href="">《鬼武者》流程解说视频攻略</a></li>
+                    <li><a href="">《实况足球2014》第12届望京杯决赛解说视</a></li>
+                    <li><a href="">《我的世界》生物攻击模式介绍及分析</a></li>
+                    <li><a href="">《我的世界》农田种植图文教程</a></li>
+                    <li><a href="">《我的世界》虚空的世界创造图文教程</a></li>
+                    <li><a href="">《恶灵附身》16刀杀死第一章电锯男视频攻</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="cl"></div>
+    <div id="footer">
+    	<div class="by">
+    		Copyright © 2014 蔡鸿霖. 保留所有权利
+        </div>
+    </div>
+</div>
+</body>
+</html>
